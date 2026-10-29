@@ -1,0 +1,29 @@
+{
+  "name": "minecraft-zoo-jb",
+  "version": "1.0.0",
+  "description": "Minecraft Zoo fan game",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.jb.minecraftzoo",
+    "productName": "Minecraft Zoo",
+    "files": [
+      "main.js",
+      "../minecraft-zoo.html"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
